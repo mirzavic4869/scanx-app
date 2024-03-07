@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Chart } from 'chart.js'
+import { Chart } from 'chart.js/auto'
 import axios from 'axios'
 import { deleteCookie, getCookie } from 'cookies-next'
 import { useRouter } from 'next/router'
@@ -74,6 +74,7 @@ export default function Overview() {
         },
       },
     })
+    myChart.destroy()
   }, [
     listComplete?.website.count,
     listComplete?.website.finished,
@@ -112,6 +113,7 @@ export default function Overview() {
         maintainAspectRatio: false,
       },
     })
+    myChart.destroy()
   }, [
     listComplete?.all_scan.count,
     // listComplete?.all_scan.sf,
@@ -163,6 +165,7 @@ export default function Overview() {
         maintainAspectRatio: false,
       },
     })
+    myChart.destroy()
   }, [
     listComplete?.scan_by_user.count,
     // listComplete?.scan_by_user.sf,

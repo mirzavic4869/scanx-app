@@ -62,7 +62,7 @@ export default function Header({ showSidebar, isShowSidebar }) {
       <div className="flex flex-row items-center justify-between max-w-full mx-auto">
         <div className="flex items-center gap-2">
           {/* <Image src={logoRISS} alt="Logo RISS" width={160} /> */}
-          <Image src={logo} alt="Logo Scanx" width={100} />
+          <Image src={logo} alt="Logo Scanx" width={80} />
         </div>
 
         <div className="flex flex-row items-center gap-4">
