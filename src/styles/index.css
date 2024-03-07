@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f4f7;
+  color: #606060;
+  font-family: 'Poppins', sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+  border-radius: 4px;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+  scroll-behavior: smooth;
+}
+
+.bg-login {
+  background: url('../assets/images/bg-login.jpg'), no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-login-2 {
+  background: url('../assets/images/bg-login-2.jpg'), no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-archive {
+  grid-template-columns: repeat(auto-fill, 16px);
+}
