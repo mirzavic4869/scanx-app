@@ -1,20 +1,30 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-export default function Select({ value, onChange, options, title, maxSelect, month }) {
+export default function Select({
+  value,
+  onChange,
+  options,
+  title,
+  maxSelect,
+  month,
+}) {
   const [highlitedIndex, sethighlitedIndex] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef(null)
   const maxSelections = maxSelect
 
-  const selectOption = useCallback((option) => {
-    if (value.some(o => o === (option.value || option))) {
-      onChange(value.filter((o) => o !== option))
-    } else {
-      if(value.length < maxSelections) {
-        onChange([...value, option.value])
+  const selectOption = useCallback(
+    (option) => {
+      if (value.some((o) => o === (option.value || option))) {
+        onChange(value.filter((o) => o !== option))
+      } else {
+        if (value.length < maxSelections) {
+          onChange([...value, option.value])
+        }
       }
-    }
-  }, [maxSelections, onChange, value])
+    },
+    [maxSelections, onChange, value]
+  )
 
   const clearOptions = () => {
     onChange([])
@@ -29,7 +39,7 @@ export default function Select({ value, onChange, options, title, maxSelect, mon
   }, [isOpen, value])
 
   useEffect(() => {
-    let currentRef = containerRef.current;
+    let currentRef = containerRef.current
     const handler = (e) => {
       if (e.target != currentRef) return
       switch (e.code) {
@@ -65,16 +75,16 @@ export default function Select({ value, onChange, options, title, maxSelect, mon
 
   function days(days) {
     const dayMap = {
-      '0': 'monday',
-      '1': 'tuesday',
-      '2': 'wednesday',
-      '3': 'thursday',
-      '4': 'friday',
-      '5': 'saturday',
-      '6': 'sunday'
-    };
-  
-    return dayMap[days] || 'unknown';
+      0: 'monday',
+      1: 'tuesday',
+      2: 'wednesday',
+      3: 'thursday',
+      4: 'friday',
+      5: 'saturday',
+      6: 'sunday',
+    }
+
+    return dayMap[days] || 'unknown'
   }
   return (
     <>
@@ -84,7 +94,7 @@ export default function Select({ value, onChange, options, title, maxSelect, mon
         onBlur={() => setIsOpen(false)}
         onClick={() => setIsOpen((prev) => !prev)}
         tabIndex={0}
-        className="relative flex min-h-[1em] w-full items-center gap-2 rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+        className="relative flex min-h-[1em] w-full items-center gap-2 rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
       >
         <span className="flex flex-grow flex-wrap gap-2">
           {value.map((v, index) => {

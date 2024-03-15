@@ -127,7 +127,7 @@ export default function BruteForceModal({ isOpen, onClose, setScanResult }) {
                       <fieldset className="my-4">
                         <p className="mb-2">List Username</p>
                         <select
-                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                           onChange={(e) => setInputListUsername(e.target.value)}
                           value={inputListUsername}
                         >
@@ -147,7 +147,7 @@ export default function BruteForceModal({ isOpen, onClose, setScanResult }) {
                       <fieldset className="my-4">
                         <p className="mb-2">List Password</p>
                         <select
-                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                           onChange={(e) => setInputListPassword(e.target.value)}
                           value={inputListPassword}
                         >
@@ -165,7 +165,7 @@ export default function BruteForceModal({ isOpen, onClose, setScanResult }) {
                       <fieldset className="my-4">
                         <p className="mb-2">Service</p>
                         <select
-                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                           onChange={(e) => setInputService(e.target.value)}
                           value={inputService}
                         >

@@ -5,6 +5,8 @@ import { getCookie } from 'cookies-next'
 import { useState } from 'react'
 import { BiSolidDownArrow, BiSolidRightArrow } from 'react-icons/bi'
 import dynamic from 'next/dynamic'
+import logo from '@/assets/images/logo-scanx-white.png'
+import Image from 'next/image'
 
 function Sidebar({ isShowSidebar }) {
   const router = useRouter()
@@ -14,12 +16,16 @@ function Sidebar({ isShowSidebar }) {
   return (
     <>
       <div
-        className={`fixed z-10 h-[calc(100vh-3.5em)] w-52 md:h-auto ${
+        className={`fixed z-50 w-52 md:h-auto ${
           isShowSidebar ? 'left-0' : '-left-52'
-        } overflow-y-auto bg-[#162C56] py-6 text-white shadow-sm transition-all duration-300 ease-out md:static md:w-52 lg:w-60`}
+        } overflow-y-auto bg-bg_primary py-6 text-white shadow-sm rounded-xl transition-all duration-300 ease-out md:static md:w-52 lg:w-60`}
       >
         {role === 'super_admin' || role === 'moderator' ? (
           <aside className="flex flex-col gap-6">
+            <div>
+              <Image src={logo} alt="Logo Scanx" width={80} />
+              <div className="h-[0.5px] bg-[#e2e2e2] mt-6"></div>
+            </div>
             {SIDER_MENU_ADMIN.map((item) => (
               <div key={item.title} className="relative px-2">
                 <Link href={item.url} target="_self">
@@ -30,9 +36,9 @@ function Sidebar({ isShowSidebar }) {
                         [item.title]: !prevState[item.title],
                       }))
                     }
-                    className={`relative flex flex-row items-center gap-4 rounded-md px-4 py-2.5 transition duration-200 hover:bg-[#475defff] hover:text-white ${
+                    className={`relative flex flex-row items-center gap-4 rounded-md px-4 py-2.5 transition duration-200 hover:bg-primary hover:text-white ${
                       router.asPath === item.url
-                        ? 'block rounded bg-[#475defff] px-4 py-2.5 text-white transition duration-200'
+                        ? 'block rounded bg-primary px-4 py-2.5 text-white transition duration-200'
                         : ''
                     }`}
                   >
@@ -47,9 +53,9 @@ function Sidebar({ isShowSidebar }) {
                           target="_self"
                         >
                           <div
-                            className={`flex flex-row items-center gap-4 rounded py-2 pl-14 text-xs transition duration-200 hover:bg-[#475defff] hover:text-white ${
+                            className={`flex flex-row items-center gap-4 rounded py-2 pl-14 text-xs transition duration-200 hover:bg-primary hover:text-white ${
                               router.asPath === subitem.url
-                                ? 'block rounded bg-[#475defff] py-2 pl-14 text-sm text-white transition duration-200'
+                                ? 'block rounded bg-primary py-2 pl-14 text-sm text-white transition duration-200'
                                 : ''
                             }`}
                           >
@@ -67,7 +73,7 @@ function Sidebar({ isShowSidebar }) {
                         [item.title]: !prevState[item.title],
                       }))
                     }
-                    className="absolute right-3 top-2 z-10 flex h-6 w-6 cursor-pointer items-center justify-center text-xs"
+                    className="absolute z-10 flex items-center justify-center w-6 h-6 text-xs cursor-pointer right-3 top-2"
                   >
                     {!isOpen[item.title] ? (
                       <BiSolidRightArrow />
@@ -83,6 +89,11 @@ function Sidebar({ isShowSidebar }) {
           </aside>
         ) : (
           <aside className="flex flex-col gap-6">
+            <div className="px-6">
+              <Image src={logo} alt="Logo Scanx" width={100} />
+              <div className="h-[0.5px] bg-[#e2e2e2] mt-6"></div>
+            </div>
+
             {SIDER_MENU_USER.map((item) => (
               <Link key={item.title} href={item.url} target="_self">
                 <div key={item.title} className="relative px-2">
@@ -94,9 +105,9 @@ function Sidebar({ isShowSidebar }) {
                           [item.title]: !prevState[item.title],
                         }))
                       }
-                      className={`relative flex flex-row items-center gap-4 rounded px-4 py-2.5 transition duration-200 hover:bg-[#475defff] hover:text-white ${
+                      className={`relative flex flex-row items-center gap-4 rounded px-4 py-2.5 transition duration-200 hover:bg-primary hover:text-white ${
                         router.asPath === item.url
-                          ? 'block rounded bg-[#475defff] px-4 py-2.5 text-white transition duration-200'
+                          ? 'block rounded bg-primary px-4 py-2.5 text-white transition duration-200'
                           : ''
                       }`}
                     >
@@ -111,9 +122,9 @@ function Sidebar({ isShowSidebar }) {
                             target="_self"
                           >
                             <div
-                              className={`flex flex-row items-center gap-4 rounded py-2 pl-14 text-xs transition duration-200 hover:bg-[#475defff] hover:text-white ${
+                              className={`flex flex-row items-center gap-4 rounded py-2 pl-14 text-xs transition duration-200 hover:bg-primary hover:text-white ${
                                 router.asPath === subitem.url
-                                  ? 'block rounded bg-[#475defff] py-2 pl-14 text-sm text-white transition duration-200'
+                                  ? 'block rounded bg-primary py-2 pl-14 text-sm text-white transition duration-200'
                                   : ''
                               }`}
                             >
@@ -131,7 +142,7 @@ function Sidebar({ isShowSidebar }) {
                           [item.title]: !prevState[item.title],
                         }))
                       }
-                      className="absolute right-3 top-3 z-10 flex h-6 w-6 cursor-pointer items-center justify-center text-xs"
+                      className="absolute z-10 flex items-center justify-center w-6 h-6 text-xs cursor-pointer right-3 top-3"
                     >
                       {!isOpen[item.title] ? (
                         <BiSolidRightArrow />

@@ -354,7 +354,7 @@ export default function AddScanScheduleModal({ isOpen, onClose, getListItem }) {
                     <fieldset className="my-3">
                       <p className="mb-2 font-medium">Frequently</p>
                       <select
-                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                         onChange={(e) => setFrequently(e.target.value)}
                         value={frequently}
                       >
@@ -408,7 +408,7 @@ export default function AddScanScheduleModal({ isOpen, onClose, getListItem }) {
                     <fieldset className="my-3">
                       <p className="mb-2 font-medium">Tools</p>
                       <select
-                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                         onChange={(e) => setTools(e.target.value)}
                         value={tools}
                       >
@@ -431,7 +431,7 @@ export default function AddScanScheduleModal({ isOpen, onClose, getListItem }) {
                     <fieldset className="my-3">
                       <p className="mb-2 font-medium">Output Format</p>
                       <select
-                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                        className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                         onChange={(e) => setOutputFormat(e.target.value)}
                         value={outputFormat}
                       >

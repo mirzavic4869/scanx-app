@@ -154,10 +154,10 @@ export default function ListUser() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">Users List</h1>
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">Users List</h1>
       <div className="relative w-full overflow-x-auto scroll-smooth whitespace-nowrap rounded-lg">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+          <thead className="bg-bg_primary text-xs uppercase text-white">
             <tr>
               <th scope="col" className="px-6 py-3">
                 active

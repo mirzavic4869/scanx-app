@@ -13,9 +13,6 @@ import {
 import { useRouter } from 'next/router'
 import Swal from 'sweetalert2'
 import { AddUserModal } from '../modal'
-import Image from 'next/image'
-import logoRISS from '@/assets/images/riss-logo.svg'
-import logo from '@/assets/images/logo-scanx.png'
 import { baseURL } from '../lib'
 
 export default function Header({ showSidebar, isShowSidebar }) {
@@ -58,13 +55,8 @@ export default function Header({ showSidebar, isShowSidebar }) {
     }
   }
   return (
-    <div className="sticky top-0 z-50 p-4 bg-white shadow-sm">
-      <div className="flex flex-row items-center justify-between max-w-full mx-auto">
-        <div className="flex items-center gap-2">
-          {/* <Image src={logoRISS} alt="Logo RISS" width={160} /> */}
-          <Image src={logo} alt="Logo Scanx" width={80} />
-        </div>
-
+    <div className="sticky top-0 z-40 p-4 bg-white shadow-sm rounded-xl">
+      <div className="flex flex-row items-center justify-end max-w-full mx-auto">
         <div className="flex flex-row items-center gap-4">
           {!isShowSidebar ? (
             <FaBars className="md:hidden" onClick={showSidebar} />
@@ -73,7 +65,7 @@ export default function Header({ showSidebar, isShowSidebar }) {
           )}
           <div className="relative">
             <FaUserCircle
-              className="hover:cursor-pointer hover:text-[#475defff]"
+              className="hover:cursor-pointer hover:text-primary"
               onClick={() => setActive((pv) => !pv)}
               size={24}
             />
@@ -87,7 +79,7 @@ export default function Header({ showSidebar, isShowSidebar }) {
                   {role === 'moderator' || role === 'super_admin' ? (
                     <div
                       onClick={() => setIsOpen((pv) => !pv)}
-                      className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-[#475defff]"
+                      className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-primary"
                     >
                       <FaPlusCircle size={16} />
                       <p>Add User</p>
@@ -96,7 +88,7 @@ export default function Header({ showSidebar, isShowSidebar }) {
                   {role === 'super_admin' && (
                     <>
                       <Link href="/user/list-user">
-                        <div className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-[#475defff]">
+                        <div className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-primary">
                           <FaListUl size={16} />
                           <p>List User</p>
                         </div>
@@ -105,7 +97,7 @@ export default function Header({ showSidebar, isShowSidebar }) {
                   )}
                   <div
                     onClick={handleLogout}
-                    className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-[#475defff]"
+                    className="flex flex-row items-center gap-3 hover:cursor-pointer hover:text-primary"
                   >
                     <FaDoorOpen size={16} />
                     <p>Logout</p>

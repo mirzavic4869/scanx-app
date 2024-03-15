@@ -13,7 +13,7 @@ export default function LoginApi() {
       <div className="mb-6 md:px-12">
         <div className="relative w-full overflow-x-auto scroll-smooth whitespace-nowrap rounded-lg">
           <table className="w-full border-collapse text-left text-sm text-gray-500">
-            <thead className="bg-[#162C56] text-xs uppercase text-white">
+            <thead className="bg-bg_primary text-xs uppercase text-white">
               <tr>
                 <th scope="col" className="px-6 py-3">
                   parameter

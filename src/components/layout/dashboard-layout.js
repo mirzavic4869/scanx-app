@@ -14,16 +14,15 @@ export default function DashboardLayout({ children }) {
     setIsShowSidebar(false)
   }, [route.pathname])
   return (
-    <div className="flex flex-col max-w-full min-h-screen mx-auto md:h-screen">
-      <Header isShowSidebar={isShowSidebar} showSidebar={showSidebar} />
-      <div className="overflow-hidden md:flex md:flex-1">
-        <Sidebar isShowSidebar={isShowSidebar} />
-        <main className="flex-1 px-6 py-3 overflow-y-auto">
+    <div className="grid max-w-full min-h-screen p-6 mx-auto md:grid-cols-3 md:gap-0 lg:gap-24 lg:grid-cols-5">
+      <Sidebar isShowSidebar={isShowSidebar} />
+      <div className="flex flex-col md:col-span-2 lg:col-span-4">
+        <Header isShowSidebar={isShowSidebar} showSidebar={showSidebar} />
+        <main className="py-4">
           {children}
           <Footer />
         </main>
       </div>
-      {/* <Footer /> */}
     </div>
   )
 }

@@ -67,7 +67,7 @@ export default function UpdateCVE() {
 
   return (
     <>
-      <p className="mb-4 text-lg font-semibold md:text-2xl">
+      <p className="mb-4 text-lg font-semibold md:text-xl">
         Update CVE Version
       </p>
       <div className="mb-4 flex flex-row items-center gap-4 rounded-md bg-white p-6 shadow-sm hover:shadow-md">
@@ -81,7 +81,7 @@ export default function UpdateCVE() {
       {/* Table Result */}
       <div className="relative w-full overflow-x-auto whitespace-nowrap rounded-lg shadow-sm hover:shadow-md">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+          <thead className="bg-bg_primary text-xs uppercase text-white">
             <tr>
               <th scope="col" className="px-6 py-3">
                 name

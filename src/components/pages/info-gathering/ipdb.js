@@ -51,7 +51,7 @@ export default function Ipdb() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">Abuse Ipdb</h1>
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">Abuse Ipdb</h1>
       <div className="mb-4 flex flex-row justify-between gap-4">
         <Input
           onChange={(e) => setInput(e.target.value)}

@@ -109,7 +109,7 @@ export default function CVE() {
     <>
       <div className="mb-4 flex flex-col items-center gap-4 md:flex-row">
         <div className="flex flex-row items-center gap-4">
-          <p className="text-lg font-semibold md:text-2xl">CVE</p>
+          <p className="text-lg font-semibold md:text-xl">CVE</p>
           <Input
             type="text"
             defaultValue={searchCVE}
@@ -126,7 +126,7 @@ export default function CVE() {
             id="sortOrder"
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
-            className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+            className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
           >
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
@@ -139,7 +139,7 @@ export default function CVE() {
             id="filteredYear"
             value={filterYear}
             onChange={(e) => setFilterYear(e.target.value)}
-            className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+            className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
           >
             <option value="all">All Year</option>
             {selectedYear.map((year, index) => (
@@ -154,7 +154,7 @@ export default function CVE() {
       {/* Table Result */}
       <div className="relative w-full overflow-x-auto whitespace-nowrap rounded-lg shadow-sm hover:shadow-md">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+          <thead className="bg-bg_primary text-xs uppercase text-white">
             <tr>
               <th scope="col" className="px-6 py-3">
                 cve id

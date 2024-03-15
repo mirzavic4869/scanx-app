@@ -59,7 +59,7 @@ export default function CWE() {
     <>
       <div className="mb-4 flex flex-col items-center gap-4 md:flex-row">
         <div className="flex flex-row items-center gap-4">
-          <p className="text-lg font-semibold md:text-2xl">CWE</p>
+          <p className="text-lg font-semibold md:text-xl">CWE</p>
           <Input
             type="text"
             defaultValue={searchCWE}
@@ -76,7 +76,7 @@ export default function CWE() {
           listCVE.map((item) => (
             <div
               key={item.cwe_id}
-              className="rounded-md bg-white p-6 shadow-lg transition-all duration-500 ease-in-out hover:bg-[#475defff] hover:text-white hover:shadow-xl"
+              className="rounded-md bg-white p-6 shadow-lg transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:shadow-xl"
             >
               <p className="mb-4 text-xl font-semibold">{item.cwe_id}</p>
               <p className="mb-2 text-sm">{item.descr}</p>

@@ -47,7 +47,7 @@ export default function UpgradeTools() {
 
   return (
     <>
-      <p className="mb-4 text-lg font-semibold md:text-2xl">Upgrade Tools</p>
+      <p className="mb-4 text-lg font-semibold md:text-xl">Upgrade Tools</p>
       <div className="mb-4 flex flex-row items-center justify-between gap-4">
         <Input
           onChange={(e) => setInput(e.target.value)}

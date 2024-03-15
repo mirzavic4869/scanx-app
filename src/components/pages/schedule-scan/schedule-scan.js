@@ -87,14 +87,14 @@ export default function ScheduleScan() {
   return (
     <div className="flex flex-col">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-lg font-semibold md:text-2xl">Scan Schedule</h1>
+        <h1 className="text-lg font-semibold md:text-xl">Scan Schedule</h1>
         <Button onClick={() => setIsOpen(!isOpen)}>NEW SCAN</Button>
       </div>
       <div className="flex w-full flex-col">
         {/* Table */}
         <div className="relative w-full overflow-x-auto whitespace-nowrap rounded-lg shadow-sm hover:shadow-md">
           <table className="w-full border-collapse text-left text-sm text-gray-500">
-            <thead className="bg-[#162C56] text-xs uppercase text-white">
+            <thead className="bg-bg_primary text-xs uppercase text-white">
               <tr>
                 <th scope="col" className="px-6 py-3">
                   application

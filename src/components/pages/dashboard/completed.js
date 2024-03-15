@@ -41,13 +41,13 @@ export default function Completed() {
   }, [getListCompleted])
 
   return (
-    <div className="mt-6 flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl ">
+    <div className="flex flex-col mt-6">
+      <h1 className="mb-5 text-lg font-semibold md:text-xl ">
         Completed Scans
       </h1>
-      <div className="relative w-full overflow-x-auto whitespace-nowrap rounded-md shadow-sm hover:shadow-md">
-        <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+      <div className="relative w-full overflow-x-auto rounded-md shadow-sm whitespace-nowrap hover:shadow-md">
+        <table className="w-full text-sm text-left text-gray-500 border-collapse">
+          <thead className="text-xs text-white uppercase bg-bg_primary">
             <tr>
               <th scope="col" className="px-6 py-3">
                 id

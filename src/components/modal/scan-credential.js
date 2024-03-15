@@ -195,7 +195,7 @@ export default function ScanCredentialModal({ isOpen, onClose, getListItem }) {
                         <fieldset className="my-2">
                           <p className="mb-2">Check</p>
                           <textarea
-                            className="w-full appearance-none rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+                            className="w-full appearance-none rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
                             rows={4}
                             onChange={(e) => setCheck(e.target.value)}
                             placeholder="On this page you can visualize or edit you user information."
@@ -210,7 +210,7 @@ export default function ScanCredentialModal({ isOpen, onClose, getListItem }) {
                             enabled={enabled}
                             setEnabled={setEnabled}
                           />
-                          <p className="text-sm italic text-[#475defff]">
+                          <p className="text-sm italic text-primary">
                             (Optional Value)
                           </p>
                         </div>

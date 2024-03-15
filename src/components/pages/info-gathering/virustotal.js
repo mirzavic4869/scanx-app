@@ -48,7 +48,7 @@ export default function VirusTotal() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">Virus Total</h1>
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">Virus Total</h1>
       <div className="mb-4 flex flex-row justify-between gap-4">
         <Input
           type={'text'}

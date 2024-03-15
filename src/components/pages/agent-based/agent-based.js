@@ -176,10 +176,10 @@ export default function AgentBased() {
   return (
     <>
       <div className="flex flex-row items-center justify-between">
-        <p className="mb-4 text-lg font-semibold md:text-2xl">Agent Based</p>
+        <p className="mb-4 text-lg font-semibold md:text-xl">Agent Based</p>
         <div
           onClick={handleDownloadExe}
-          className="mb-4 flex flex-row items-center gap-2 hover:cursor-pointer hover:text-[#475defff]"
+          className="mb-4 flex flex-row items-center gap-2 hover:cursor-pointer hover:text-primary"
         >
           <p>Download .exe</p>
           <i>
@@ -189,7 +189,7 @@ export default function AgentBased() {
       </div>
       <div className="mb-4 flex flex-row items-center justify-between gap-4">
         {/* <select
-          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
           onChange={handleChange}
           value={selectedHost}
         >
@@ -217,7 +217,7 @@ export default function AgentBased() {
       </div>
       <div className="relative w-full overflow-x-auto scroll-smooth whitespace-nowrap rounded-lg">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white ">
+          <thead className="bg-bg_primary text-xs uppercase text-white ">
             <tr>
               <th scope="col" className="px-6 py-3">
                 host
@@ -268,7 +268,7 @@ export default function AgentBased() {
                 </td>
                 <td
                   onClick={() => handleDetail(item.id)}
-                  className="flex cursor-pointer items-center space-x-3 px-6 py-4 text-[#475defff]"
+                  className="flex cursor-pointer items-center space-x-3 px-6 py-4 text-primary"
                 >
                   Detail
                 </td>

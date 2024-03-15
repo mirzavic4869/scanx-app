@@ -13,7 +13,7 @@ export default function Table({ columns, data }) {
 
   return (
     <table className="w-full text-left text-xs" {...getTableProps()}>
-      <thead className="bg-[#162C56] text-xs uppercase text-white">
+      <thead className="bg-bg_primary text-xs uppercase text-white">
         {headerGroups.map((headerGroup) => {
           const { key, ...restHeaderGroupProps } =
             headerGroup.getHeaderGroupProps()

@@ -190,14 +190,12 @@ export default function ScanCredential() {
   return (
     <>
       <div className="mb-4 flex justify-between">
-        <p className="text-lg font-semibold md:text-2xl">
-          Scan with Credential
-        </p>
+        <p className="text-lg font-semibold md:text-xl">Scan with Credential</p>
         <Button onClick={() => setIsOpen(!isOpen)}>+ADD</Button>
       </div>
       <div className="relative overflow-x-auto rounded-lg shadow-sm hover:shadow-md">
         <table className="w-full bg-white text-left text-sm">
-          <thead className="bg-[#162C56] text-xs uppercase text-white ">
+          <thead className="bg-bg_primary text-xs uppercase text-white ">
             <tr>
               <th scope="col" className="px-6 py-3">
                 target url
@@ -226,7 +224,7 @@ export default function ScanCredential() {
                   </td>
                   <td
                     onClick={() => handleDetail(item)}
-                    className="px-6 py-4 hover:cursor-pointer hover:text-[#475defff]"
+                    className="px-6 py-4 hover:cursor-pointer hover:text-primary"
                   >
                     {item}
                   </td>

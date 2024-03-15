@@ -183,12 +183,12 @@ export default function Overview() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">Overview</h1>
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">Overview</h1>
       <div>
-        <div className="mx-auto grid grid-cols-1 justify-center gap-4 md:grid-cols-1 lg:grid-cols-2">
+        <div className="grid justify-center grid-cols-1 gap-4 mx-auto lg:grid-cols-2">
           {/* Doughnut chart */}
-          <div className="rounded-md bg-white p-6 shadow-sm hover:shadow-md">
-            <p className="mb-4 text-xl font-bold">All Scan</p>
+          <div className="p-6 bg-white rounded-md shadow-sm hover:shadow-md">
+            <p className="mb-4 font-medium">All Scan</p>
             <div
               className="mx-auto"
               style={{
@@ -200,8 +200,8 @@ export default function Overview() {
             </div>
           </div>
           {/* Radar Chart */}
-          <div className="rounded-xl bg-white p-6 shadow-sm hover:shadow-md">
-            <p className="mb-4 text-xl font-bold">Scan Website</p>
+          <div className="p-6 bg-white shadow-sm rounded-xl hover:shadow-md">
+            <p className="mb-4 font-medium">Scan Website</p>
             <div
               className="mx-auto"
               style={{
@@ -213,8 +213,8 @@ export default function Overview() {
             </div>
           </div>
           {/* Bar Chart */}
-          <div className="rounded-xl bg-white p-6 shadow-sm hover:shadow-md md:col-span-2">
-            <p className="mb-4 text-xl font-bold">Scan by User</p>
+          <div className="p-6 bg-white shadow-sm rounded-xl hover:shadow-md md:col-span-2">
+            <p className="mb-4 font-medium">Scan by User</p>
             <div
               className="mx-auto"
               style={{

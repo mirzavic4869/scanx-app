@@ -84,7 +84,7 @@ export default function Detail() {
   // })
   return (
     <>
-      <p className="mb-4 text-lg font-semibold md:text-2xl">Host {id}</p>
+      <p className="mb-4 text-lg font-semibold md:text-xl">Host {id}</p>
       <div className="relative mb-4 overflow-x-auto rounded-lg">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
           <thead className="bg-gray-50 text-xs uppercase text-gray-700 ">
@@ -111,7 +111,7 @@ export default function Detail() {
         </table>
       </div>
       {/* Table Ports */}
-      <p className="mb-4 text-lg font-semibold md:text-2xl">Ports</p>
+      <p className="mb-4 text-lg font-semibold md:text-xl">Ports</p>
       <div className="mb-4 flex flex-row items-center justify-between gap-4">
         <Input
           placeholder={'Search'}
@@ -122,7 +122,7 @@ export default function Detail() {
       </div>
       <div className="relative mb-4 overflow-x-auto rounded-lg shadow-sm hover:shadow-md">
         <table className="mb-5 w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+          <thead className="bg-bg_primary text-xs uppercase text-white">
             <tr>
               <th scope="col" className="p-4">
                 cpe
@@ -188,7 +188,7 @@ export default function Detail() {
       </div>
       {/* Detail Vulnerability */}
       <div>
-        <p className="mb-4 text-lg font-semibold md:text-2xl">Vulns</p>
+        <p className="mb-4 text-lg font-semibold md:text-xl">Vulns</p>
         {searchResult.map((item, index) => (
           <div className="mx-auto" key={index}>
             {item.suspect?.map((suspect, index) => (
@@ -202,7 +202,7 @@ export default function Detail() {
                   })
                   .map((vuln, vulnIndex) => (
                     <div
-                      className="rounded-md bg-white p-6 shadow-lg transition-all duration-500 ease-in-out hover:bg-[#475defff] hover:text-white hover:shadow-xl"
+                      className="rounded-md bg-white p-6 shadow-lg transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:shadow-xl"
                       key={vulnIndex}
                     >
                       <p className="text-lg font-semibold">

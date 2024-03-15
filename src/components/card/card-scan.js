@@ -16,7 +16,7 @@ export default function CardScan({ title, value }) {
         {value.map((item) => (
           <div
             className={`border-b border-gray-300 px-5 py-3 ${
-              active === item.url ? 'font-semibold text-[#475defff]' : ''
+              active === item.url ? 'font-semibold text-primary' : ''
             }`}
             key={item.id}
           >

@@ -192,10 +192,10 @@ export default function HistoryScan() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">History Scans</h1>
-      <div className="relative w-full overflow-x-auto scroll-smooth whitespace-nowrap rounded-lg">
-        <table className="w-full border-collapse text-left text-sm text-gray-500">
-          <thead className="bg-[#162C56] text-xs uppercase text-white">
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">History Scans</h1>
+      <div className="relative w-full overflow-x-auto rounded-lg scroll-smooth whitespace-nowrap">
+        <table className="w-full text-sm text-left text-gray-500 border-collapse">
+          <thead className="text-xs text-white uppercase bg-bg_primary">
             <tr>
               <th scope="col" className="px-6 py-3">
                 queue id
@@ -236,7 +236,7 @@ export default function HistoryScan() {
                       target="_blank"
                     >
                       <FaEye
-                        className="hover:cursor-pointer hover:text-[#475defff]"
+                        className="hover:cursor-pointer hover:text-primary"
                         onClick={() =>
                           handlePreviewReport(
                             item.queue_id,
@@ -250,7 +250,7 @@ export default function HistoryScan() {
                   <td className="px-2 py-4">
                     <FaDownload
                       aria-disabled
-                      className="hover:cursor-pointer hover:text-[#475defff]"
+                      className="hover:cursor-pointer hover:text-primary"
                       onClick={() =>
                         handleDownloadReport(
                           item.queue_id,

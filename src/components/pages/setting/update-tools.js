@@ -83,10 +83,10 @@ export default function UpdateTools() {
 
   return (
     <>
-      <p className="mb-4 text-lg font-semibold md:text-2xl">Update Tools</p>
+      <p className="mb-4 text-lg font-semibold md:text-xl">Update Tools</p>
       <div className="mb-4 flex flex-row items-center justify-between gap-4">
         <select
-          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
           onChange={handleChange}
           value={selectedTools}
         >
@@ -109,7 +109,7 @@ export default function UpdateTools() {
           selectedTools === optionTools[6].value
             ? Object.entries(updateResult).map(([key, value], index) => (
                 <p className="my-2" key={index}>
-                  <strong className="text-[#162C56]">{key}:</strong> {value}
+                  <strong className="text-bg_primary">{key}:</strong> {value}
                 </p>
               ))
             : ''
@@ -119,7 +119,7 @@ export default function UpdateTools() {
           selectedTools === optionTools[7].value && (
             <div className="relative w-full overflow-x-auto scroll-smooth rounded-lg">
               <table className="w-full border-collapse text-left text-sm text-gray-500">
-                <thead className="bg-[#162C56] text-xs uppercase text-white">
+                <thead className="bg-bg_primary text-xs uppercase text-white">
                   <tr>
                     <th scope="col" className="px-6 py-3"></th>
                     <th scope="col" className="px-6 py-3">
@@ -135,7 +135,7 @@ export default function UpdateTools() {
                 </thead>
                 <tbody>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Webapp</th>
+                    <th className="px-6 py-3 text-bg_primary">Webapp</th>
                     <td className="px-6 py-4">{updateResult.body?.scan_x1}</td>
                     <td className="px-6 py-4">
                       {updateResult.published_at?.scan_x1}
@@ -145,7 +145,7 @@ export default function UpdateTools() {
                     </td>
                   </tr>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Vulnscan</th>
+                    <th className="px-6 py-3 text-bg_primary">Vulnscan</th>
                     <td className="px-6 py-4">{updateResult.body?.scan_x2}</td>
                     <td className="px-6 py-4">
                       {updateResult.published_at?.scan_x2}
@@ -155,7 +155,7 @@ export default function UpdateTools() {
                     </td>
                   </tr>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Subdomain</th>
+                    <th className="px-6 py-3 text-bg_primary">Subdomain</th>
                     <td className="px-6 py-4">
                       {updateResult.body?.subdomain}
                     </td>
@@ -167,7 +167,7 @@ export default function UpdateTools() {
                     </td>
                   </tr>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Wordpress</th>
+                    <th className="px-6 py-3 text-bg_primary">Wordpress</th>
                     <td className="px-6 py-4">
                       {updateResult.body?.wordpress}
                     </td>
@@ -179,7 +179,7 @@ export default function UpdateTools() {
                     </td>
                   </tr>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Bruteforce</th>
+                    <th className="px-6 py-3 text-bg_primary">Bruteforce</th>
                     <td className="px-6 py-4">
                       {updateResult.body?.bruteforce}
                     </td>
@@ -191,7 +191,7 @@ export default function UpdateTools() {
                     </td>
                   </tr>
                   <tr className="border-y-4 bg-white hover:bg-[#edf0fdff]">
-                    <th className="px-6 py-3 text-[#162C56]">Drupal</th>
+                    <th className="px-6 py-3 text-bg_primary">Drupal</th>
                     <td className="px-6 py-4">{updateResult.body?.drupal}</td>
                     <td className="px-6 py-4">
                       {updateResult.published_at?.drupal}

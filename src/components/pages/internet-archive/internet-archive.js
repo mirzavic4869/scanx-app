@@ -58,7 +58,7 @@ export default function InternetArchive() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">
         Internet Archive
       </h1>
       <div className="mb-4 flex flex-col justify-between gap-4 md:flex-row">
@@ -86,7 +86,7 @@ export default function InternetArchive() {
       </div>
       <div>
         {url && startDate && endDate ? (
-          <div className="mb-4 flex flex-col rounded-md bg-[#475defff] p-4 text-white shadow-sm hover:shadow-md md:col-span-2 lg:col-span-4">
+          <div className="mb-4 flex flex-col rounded-md bg-primary p-4 text-white shadow-sm hover:shadow-md md:col-span-2 lg:col-span-4">
             <h1 className="text-center text-lg font-semibold">{url}</h1>
           </div>
         ) : (
@@ -103,37 +103,37 @@ export default function InternetArchive() {
                 onClick={() => handleOpenURL(item.url)}
                 className={`flex flex-col items-center justify-center rounded-md bg-white p-2 shadow-lg transition-all duration-500 ease-in-out hover:cursor-pointer hover:bg-[#edf0fdff] hover:shadow-xl md:p-4`}
               >
-                <p className="text-center text-xs text-[#475defff]">
+                <p className="text-center text-xs text-primary">
                   {item.timestamp.slice(0, 4)}
                 </p>
                 <p className="mb-2 text-center text-xs">
                   {item.timestamp.slice(4, 6) === '01'
                     ? 'Jan'
                     : item.timestamp.slice(4, 6) === '02'
-                    ? 'Feb'
-                    : item.timestamp.slice(4, 6) === '03'
-                    ? 'Mar'
-                    : item.timestamp.slice(4, 6) === '04'
-                    ? 'Apr'
-                    : item.timestamp.slice(4, 6) === '05'
-                    ? 'May'
-                    : item.timestamp.slice(4, 6) === '06'
-                    ? 'Jun'
-                    : item.timestamp.slice(4, 6) === '07'
-                    ? 'Jul'
-                    : item.timestamp.slice(4, 6) === '08'
-                    ? 'Aug'
-                    : item.timestamp.slice(4, 6) === '09'
-                    ? 'Sept'
-                    : item.timestamp.slice(4, 6) === '10'
-                    ? 'Oct'
-                    : item.timestamp.slice(4, 6) === '11'
-                    ? 'Nov'
-                    : item.timestamp.slice(4, 6) === '12'
-                    ? 'Dec'
-                    : ''}
+                      ? 'Feb'
+                      : item.timestamp.slice(4, 6) === '03'
+                        ? 'Mar'
+                        : item.timestamp.slice(4, 6) === '04'
+                          ? 'Apr'
+                          : item.timestamp.slice(4, 6) === '05'
+                            ? 'May'
+                            : item.timestamp.slice(4, 6) === '06'
+                              ? 'Jun'
+                              : item.timestamp.slice(4, 6) === '07'
+                                ? 'Jul'
+                                : item.timestamp.slice(4, 6) === '08'
+                                  ? 'Aug'
+                                  : item.timestamp.slice(4, 6) === '09'
+                                    ? 'Sept'
+                                    : item.timestamp.slice(4, 6) === '10'
+                                      ? 'Oct'
+                                      : item.timestamp.slice(4, 6) === '11'
+                                        ? 'Nov'
+                                        : item.timestamp.slice(4, 6) === '12'
+                                          ? 'Dec'
+                                          : ''}
                 </p>
-                <p className="text-center text-lg font-medium text-[#475defff] md:text-2xl">
+                <p className="text-center text-lg font-medium text-primary md:text-xl">
                   {item.timestamp.slice(6, 8)}
                 </p>
               </div>

@@ -91,7 +91,7 @@ export default function ScanX3() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-5 text-lg font-semibold md:text-2xl">Scan_x3</h1>
+      <h1 className="mb-5 text-lg font-semibold md:text-xl">Scan_x3</h1>
       <div className="mb-4 flex flex-col justify-between gap-4 md:flex-row">
         <Input
           onChange={(e) => setTarget(e.target.value)}
@@ -100,7 +100,7 @@ export default function ScanX3() {
           placeholder="http://yourdomain.com/"
         />
         <select
-          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-[#475defff] focus:ring-[#475defff]"
+          className="block w-full rounded-md border border-solid border-[#e2e2e2] px-4 py-2 outline-none focus:border-primary focus:ring-primary"
           onChange={handleChange}
           value={selectedFormat}
         >
